@@ -108,7 +108,7 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-gray-800" aria-labelledby="footer-heading">
+    <footer className="bg-secondary-800" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -121,7 +121,7 @@ export function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-base text-secondary-300 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -133,7 +133,7 @@ export function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-base text-secondary-300 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -147,7 +147,7 @@ export function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-base text-secondary-300 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -159,7 +159,7 @@ export function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-base text-secondary-300 hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -179,7 +179,7 @@ export function Footer() {
                   <select
                     id="language"
                     name="language"
-                    className="block w-full appearance-none rounded-md border border-transparent bg-gray-700 bg-none py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-white sm:text-sm"
+                    className="block w-full appearance-none rounded-md border border-transparent bg-secondary-700 bg-none py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-white sm:text-sm"
                     defaultValue="English"
                   >
                     <option>English</option>
@@ -196,10 +196,10 @@ export function Footer() {
             </form>
           </div>
         </div>
-        <div className="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+        <div className="border-t border-secondary-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
             <h3 className="text-base font-medium text-white">Subscribe to our newsletter</h3>
-            <p className="mt-2 text-base text-gray-300">
+            <p className="mt-2 text-base text-secondary-300">
               The latest news, articles, and resources, sent to your inbox weekly.
             </p>
           </div>
@@ -213,29 +213,29 @@ export function Footer() {
               id="email-address"
               autoComplete="email"
               required
-              className="w-full min-w-0 appearance-none rounded-md border border-transparent bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:border-white focus:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:max-w-xs"
+              className="w-full min-w-0 appearance-none rounded-md border border-transparent bg-white py-2 px-4 text-base text-secondary-900 placeholder-secondary-500 focus:border-white focus:placeholder-secondary-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-secondary-800 sm:max-w-xs"
               placeholder="Enter your email"
             />
             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-500 py-2 px-4 text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-base font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-secondary-800"
               >
                 Subscribe
               </button>
             </div>
           </form>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-secondary-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+              <a key={item.name} href={item.href} className="text-secondary-400 hover:text-secondary-300">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
+          <p className="mt-8 text-base text-secondary-400 md:order-1 md:mt-0">
             &copy; 2022 AgoraCan, Inc. All rights reserved.
           </p>
         </div>
