@@ -195,7 +195,7 @@ export function Header() {
               </a>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
-              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -207,7 +207,7 @@ export function Header() {
                     <Popover.Button
                       className={classNames(
                         open ? 'text-gray-900' : 'text-gray-500',
-                        'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2'
+                        'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
                       )}
                     >
                       <span>Solutions</span>
@@ -238,7 +238,7 @@ export function Header() {
                                 href={item.href}
                                 className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
                               >
-                                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-orange-600 text-white sm:h-12 sm:w-12">
+                                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary-600 text-white sm:h-12 sm:w-12">
                                   <item.icon className="h-6 w-6" aria-hidden="true" />
                                 </div>
                                 <div className="ml-4">
@@ -267,7 +267,7 @@ export function Header() {
               </Link>
               <Link
                 href="/register"
-                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
+                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primary-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-700"
               >
                 Sign up
               </Link>
@@ -300,7 +300,7 @@ export function Header() {
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+                      <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                         <span className="sr-only">Close menu</span>
                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -314,7 +314,7 @@ export function Header() {
                           href={item.href}
                           className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
                         >
-                          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-orange-600 text-white">
+                          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary-600 text-white">
                             <item.icon className="h-6 w-6" aria-hidden="true" />
                           </div>
                           <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
@@ -338,7 +338,7 @@ export function Header() {
                   <div className="mt-6">
                     <NavLink
                       href="/login"
-                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
+                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-700"
                     >
                       Sign In
                     </NavLink>
@@ -374,10 +374,10 @@ export function Header() {
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Take control of your</span>
-                    <span className="block text-orange-200">customer support</span>
+                    <span className="block text-white">The best for</span>
+                    <span className="block text-primary-400">your company</span>
                   </h1>
-                  <p className="mx-auto mt-6 max-w-lg text-center text-xl text-orange-200 sm:max-w-3xl">
+                  <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
                     Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
                     amet fugiat veniam occaecat fugiat aliqua.
                   </p>
@@ -391,13 +391,13 @@ export function Header() {
                       />
                       {/* <a
                         href="#"
-                        className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-orange-700 shadow-sm hover:bg-orange-50 sm:px-8"
+                        className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-primary-700 shadow-sm hover:bg-primary-50 sm:px-8"
                       >
                         Get started
                       </a>
                       <a
                         href="#"
-                        className="flex items-center justify-center rounded-md border border-transparent bg-orange-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
+                        className="flex items-center justify-center rounded-md border border-transparent bg-primary-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
                       >
                         Live demo
                       </a> */}

@@ -11,6 +11,7 @@ import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
 import Presentation from '@/components/Presentation'
 import FeaturesSection from '@/components/FeaturesSection'
+import MainInfos from '@/components/MainInfos'
 
 export default function Home() {
   return (
@@ -28,9 +29,10 @@ export default function Home() {
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
         {/* <CallToAction /> */}
+        <MainInfos/>
         <Presentation/>
         <FeaturesSection/>
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Pricing />
         <Faqs />
       </main>
