@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -21,10 +22,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#ce5d35",
-        black: "#37233c",
-        orange: "#dd933e",
-        orangelight: "#d38366"
+        primary: colors.orange,
+        secondary: colors.zinc,
+        third: "#dd933e",
+        caca: colors.blue
       },
       borderRadius: {
         '4xl': '2rem',
