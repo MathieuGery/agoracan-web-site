@@ -1,9 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
+import { EnvelopeIcon, MapPinIcon, PhoneIcon} from '@heroicons/react/24/outline'
+
 const metrics = [
-    { id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.' },
-    { id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.' },
-    { id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.' },
-    { id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.' },
+    { id: 1, icon: MapPinIcon, emphasis: '12 Rue de Cannes, ', rest: '5900 Lille' },
+    { id: 2, icon: PhoneIcon, emphasis: '+33 8 89 76 54 32', rest: '' },
+    { id: 3, icon: EnvelopeIcon, emphasis: 'mailtest@agoracan.com', rest: '' }
   ]
   
   export default function MainInfos() {
@@ -29,15 +30,16 @@ const metrics = [
             <p className="mt-3 text-3xl font-bold tracking-tight text-white">
               Get actionable data that will help grow your business
             </p>
-            <p className="mt-5 text-lg text-secondary-300">
+            {/* <p className="mt-5 text-lg text-secondary-300">
               Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare
               feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus
               nibh integer quis. Eu vulputate diam sit tellus quis at.
-            </p>
+            </p> */}
             <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
               {metrics.map((item) => (
                 <p key={item.id}>
-                  <span className="block text-2xl font-bold text-white">{item.stat}</span>
+                    <item.icon className="h-10 w-10 text-primary-600"/>
+                  {/* <span className="block text-2xl font-bold text-primary-600">{item.stat}</span> */}
                   <span className="mt-1 block text-base text-secondary-300">
                     <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
                   </span>
