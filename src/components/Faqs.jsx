@@ -6,7 +6,7 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'Does AgoraCan handle VAT?',
       answer:
         'Well no, but if you move your company offshore you can probably ignore it.',
     },
@@ -15,7 +15,7 @@ const faqs = [
       answer: 'Absolutely, we are happy to take your money in all forms.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'How do I apply for a job at AgoraCan?',
       answer:
         'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
@@ -24,17 +24,17 @@ const faqs = [
     {
       question: 'What was that testimonial about tax fraud all about?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'AgoraCan is just a software application, ultimately your books are your responsibility.',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'AgoraCan sounds horrible but why do I still feel compelled to purchase?',
       answer:
         'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
     },
     {
       question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+        'I found other companies called AgoraCan, are you sure you can use this name?',
       answer:
         'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
     },
@@ -64,14 +64,14 @@ export function Faqs() {
       aria-labelledby="faq-title"
       className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
     >
-      <Image
+      {/* <Image
         className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
         src={backgroundImage}
         alt=""
         width={1558}
         height={946}
         unoptimized
-      />
+      /> */}
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2

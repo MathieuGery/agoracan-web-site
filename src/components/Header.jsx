@@ -185,7 +185,7 @@ export function Header() {
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">AgoraCan</span>
                 <Image
                   src={logo}
                   alt=""
@@ -291,10 +291,12 @@ export function Header() {
                 <div className="px-5 pt-5 pb-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img
+                      <Image
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600"
+                        src={logo}
                         alt="Your Company"
+                        height={50}
+                        width={50}
                       />
                     </div>
                     <div className="-mr-2">
@@ -338,11 +340,11 @@ export function Header() {
                       href="/login"
                       className="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
                     >
-                      qsdfqsef
+                      Sign In
                     </NavLink>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
                       Existing customer?
-                      <a href="/login" className="text-gray-900">
+                      <a href="/login" className="text-gray-900 pl-3">
                         Sign in
                       </a>
                     </p>

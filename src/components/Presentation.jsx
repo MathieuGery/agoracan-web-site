@@ -6,7 +6,7 @@ import meetingRoom from '../images/pictures/meeting-room.jpg';
 
 export default function Presentation() {
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-32 m-10">
+    <div className="relative overflow-hidden bg-white pt-16 pb-32 mx-10">
       <div className="relative">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
           <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
@@ -46,7 +46,7 @@ export default function Presentation() {
           </div>
         </div>
       </div>
-      <div className="mt-2">
+      <div className="mt-8">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
           <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-5 lg:px-0">
             <div>
