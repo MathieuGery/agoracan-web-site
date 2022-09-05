@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import logo from '../images/logos/mini.jpg';
+import fullLogo from '../images/logos/AgoraCanLogo.png';
 import Image from 'next/image';
 import { Fragment } from 'react'
 import Link from 'next/link'
@@ -168,6 +169,7 @@ const navigation = [
   { name: 'Pricing', href: '#pricing' },
   { name: 'Partners', href: '#' },
   { name: 'Company', href: '#' },
+  { name: 'Contact us', href: '#' },
 ]
 
 function classNames(...classes) {
@@ -357,7 +359,7 @@ export function Header() {
         <div>
           {/* Hero card */}
           <div className="relative">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+            <div className="absolute inset-x-0 bottom-0 h-1/2" />
             <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
                 <div className="absolute inset-0">
@@ -378,8 +380,14 @@ export function Header() {
                     amet fugiat veniam occaecat fugiat aliqua.
                   </p>
                   <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-                    <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                      <a
+                    <div className="space-y-4">
+                    <Image
+                        src={fullLogo}
+                        alt=""
+                        height={150}
+                        width={350}
+                      />
+                      {/* <a
                         href="#"
                         className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-orange-700 shadow-sm hover:bg-orange-50 sm:px-8"
                       >
@@ -390,7 +398,7 @@ export function Header() {
                         className="flex items-center justify-center rounded-md border border-transparent bg-orange-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
                       >
                         Live demo
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -399,9 +407,9 @@ export function Header() {
           </div>
 
           {/* Logo cloud */}
-          <div className="bg-gray-100">
-            <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
-              <p className="text-center text-base font-semibold text-gray-500">
+          {/* <div className="bg-gray-100">
+            <div className="py-5">
+              {/*<p className="text-center text-base font-semibold text-gray-500">
                 Trusted by over 5 very average small businesses
               </p>
               <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
@@ -434,7 +442,7 @@ export function Header() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>  */}
         </div>
       </main>
     </div>
