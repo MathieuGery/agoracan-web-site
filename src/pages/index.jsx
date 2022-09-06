@@ -29,9 +29,9 @@ export default function Home() {
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
         {/* <CallToAction /> */}
-        <MainInfos/>
-        <Presentation/>
-        <FeaturesSection/>
+        <MainInfos />
+        <Presentation />
+        <FeaturesSection />
         {/* <Testimonials /> */}
         <Pricing />
         <Faqs />
