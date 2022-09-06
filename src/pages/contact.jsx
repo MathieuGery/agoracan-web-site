@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 
 /*
@@ -19,7 +20,7 @@ import { NavBar } from "@/components/NavBar";
 export default function Contact() {
   return (
     <div className="bg-white">
-      <NavBar></NavBar>
+      <NavBar/>
       <div className="relative bg-white">
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
@@ -214,6 +215,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
