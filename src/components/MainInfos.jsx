@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon, MapPinIcon, PhoneIcon, ClockIcon } from '@heroicons/react/24/outline'
 
 const metrics = [
   { id: 1, icon: MapPinIcon, emphasis: '12 Rue de Cannes, ', rest: '5900 Lille' },
@@ -9,7 +9,7 @@ const metrics = [
 
 export default function MainInfos() {
   return (
-    <div className="relative bg-secondary-900 rounded-xl mx-10 mt-8">
+    <div className="relative bg-secondary-900 mt-8">
       <div className="absolute bottom-0 h-80 w-full xl:inset-0 xl:h-full">
         <div className="h-full w-full xl:grid xl:grid-cols-2">
           <div className="h-full xl:relative xl:col-start-2">
