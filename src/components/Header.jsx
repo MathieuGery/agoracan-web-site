@@ -52,7 +52,7 @@ export function Header() {
                       className="flex items-center justify-center rounded-md border border-transparent bg-primary-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
                     >
                       Live demo
-                    </a> */} */}
+                    </a> */}
                     </div>
                   </div>
                 </div>
