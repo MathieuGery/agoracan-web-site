@@ -7,39 +7,32 @@ import { NavLink } from '@/components/NavLink'
 import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  ChatBubbleBottomCenterTextIcon,
-  ChatBubbleLeftRightIcon,
-  InboxIcon,
-  QuestionMarkCircleIcon,
+  UserGroupIcon,
+  BriefcaseIcon,
+  BuildingOfficeIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const solutions = [
   {
-    name: 'Inbox',
+    name: 'Domiciliation',
     description: 'Get a better understanding of where your traffic is coming from.',
     href: '#',
-    icon: InboxIcon,
+    icon: BuildingOfficeIcon,
   },
   {
-    name: 'Messaging',
+    name: 'Office Rent',
     description: 'Speak directly to your customers in a more meaningful way.',
     href: '#',
-    icon: ChatBubbleBottomCenterTextIcon,
+    icon: UserGroupIcon,
   },
   {
-    name: 'Live Chat',
+    name: 'Legal Advice',
     description: "Your customers' data will be safe and secure.",
     href: '#',
-    icon: ChatBubbleLeftRightIcon,
-  },
-  {
-    name: 'Knowledge Base',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: QuestionMarkCircleIcon,
-  },
+    icon: BriefcaseIcon,
+  }
 ]
 const navigation = [
   { name: 'Pricing', href: '/#pricing' },
@@ -113,7 +106,7 @@ export function NavBar() {
                                 <a
                                   key={item.name}
                                   href={item.href}
-                                  className="-m-3 flex items-start rounded-lg p-3 hover:bg-secondary-50"
+                                  className="-m-3 flex items-start rounded-lg p-3 hover:bg-secondary-200"
                                 >
                                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary-600 text-white sm:h-12 sm:w-12">
                                     <item.icon className="h-6 w-6" aria-hidden="true" />
