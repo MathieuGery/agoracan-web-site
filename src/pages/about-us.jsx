@@ -1,5 +1,4 @@
 import { NavBar } from '@/components/NavBar';
-import React, { Component } from 'react';
 import { CameraIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import LivingRoom from '../images/pictures/living-room.jpg';
