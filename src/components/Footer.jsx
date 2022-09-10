@@ -169,7 +169,7 @@ export function Footer() {
             </div>
           </div>
           <div className="mt-12 xl:mt-0">
-            <h3 className="text-base font-medium text-white">Language &amp; Currency</h3>
+            <h3 className="text-base font-medium text-white">Language</h3>
             <form className="mt-4 sm:max-w-xs">
               <fieldset className="w-full">
                 <label htmlFor="language" className="sr-only">
@@ -195,36 +195,6 @@ export function Footer() {
               </fieldset>
             </form>
           </div>
-        </div>
-        <div className="border-t border-secondary-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
-          <div>
-            <h3 className="text-base font-medium text-white">Subscribe to our newsletter</h3>
-            <p className="mt-2 text-base text-secondary-300">
-              The latest news, articles, and resources, sent to your inbox weekly.
-            </p>
-          </div>
-          <form className="mt-4 sm:flex sm:max-w-md lg:mt-0">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              type="email"
-              name="email-address"
-              id="email-address"
-              autoComplete="email"
-              required
-              className="w-full min-w-0 appearance-none rounded-md border border-transparent bg-white py-2 px-4 text-base text-secondary-900 placeholder-secondary-500 focus:border-white focus:placeholder-secondary-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-secondary-800 sm:max-w-xs"
-              placeholder="Enter your email"
-            />
-            <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-base font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-secondary-800"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
         </div>
         <div className="mt-8 border-t border-secondary-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
