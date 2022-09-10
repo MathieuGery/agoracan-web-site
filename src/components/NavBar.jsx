@@ -18,7 +18,7 @@ const solutions = [
   {
     name: 'Domiciliation',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: '/domiciliation',
     icon: BuildingOfficeIcon,
   },
   {
