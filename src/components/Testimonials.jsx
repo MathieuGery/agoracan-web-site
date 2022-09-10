@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Testimonials() {
   return (
-    <section className="overflow-hidden bg-secondary-50 py-12 md:py-2 lg:py-2">
+    <section className="overflow-hidden bg-white py-12 md:py-2 lg:py-2">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <svg
           className="absolute top-full right-full translate-x-1/3 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2"
