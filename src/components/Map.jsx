@@ -1,5 +1,3 @@
-import { Footer } from "@/components/Footer";
-import { NavBar } from "@/components/NavBar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
@@ -25,7 +23,7 @@ export default function Map() {
     }, [])
 
     return (
-        <div className=" rounded-xl bg-secondary-900 py-2 mt-8 mx-12">
+        <div className=" rounded-xl bg-secondary-900 py-2 mt-8 sm:mx-12">
             <Head>
                 <link
                     href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
