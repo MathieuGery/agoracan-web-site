@@ -1,12 +1,11 @@
-import { Footer } from "@/components/Footer";
-import { NavBar } from "@/components/NavBar";
-
+import { NavBar } from '@/components/NavBar';
+import { Footer } from '@/components/Footer';
 
 export default function Domiciliation() {
-  return (
-    <div className="bg-white">
-      <NavBar/>
-      <Footer/>
-    </div>
-  )
+    return (
+        <div>
+            <NavBar />
+            <Footer/>
+        </div>
+    );
 }
