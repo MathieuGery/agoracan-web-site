@@ -60,7 +60,10 @@ function classNames(...classes) {
 
 export function Steps() {
   return (
-    <div className="grid relative mx-10 mt-10 place-items-center">
+    <div className="grid relative mx-10 mt-10 place-items-center mb-10">
+      <div className="lg:col-span-1">
+        <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl mb-8">Procedure steps</h2>
+      </div>
       <ul role="list" className="-mb-7">
         {timeline.map((event, eventIdx) => (
           <li key={event.id}>

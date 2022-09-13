@@ -12,6 +12,7 @@ import FeaturesSection from '@/components/FeaturesSection'
 import MainInfos from '@/components/MainInfos'
 import { Steps } from '@/components/Steps'
 import Map from '@/components/Map'
+import Cta from '@/components/domiciliation/Cta'
 
 export default function Home() {
   return (
@@ -35,7 +36,8 @@ export default function Home() {
         <Pricing />
         <Testimonials />
         <Steps/>
-        <Faqs />
+        <Cta/>
+        <Faqs/>
       </main>
       <Footer />
     </>
