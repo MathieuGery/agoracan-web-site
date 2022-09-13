@@ -30,7 +30,7 @@ const supportLinks = [
 
 export function Baiting() {
     return (
-        <div className="bg-whitel m-10">
+        <div className="bg-white p-10">
             <main>
                 <div className="bg-white">
                     {/* Cards */}
