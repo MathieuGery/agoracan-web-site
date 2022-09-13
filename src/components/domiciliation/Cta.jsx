@@ -12,9 +12,9 @@ export default function Cta() {
           </p>
           <a
             href="/contact"
-            className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-secondary-600 hover:bg-secondary-50 sm:w-auto"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white hover:bg-primary-600 hover:scale-110 cursor-pointer transition duration-200 transform sm:w-auto"
           >
-            Contact us
+            Contact Us
           </a>
         </div>
       </div>
