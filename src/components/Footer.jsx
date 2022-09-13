@@ -3,23 +3,19 @@ import { Baiting } from './Baiting'
 
 const navigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+    { name: 'Domiciliation', href: '/domiciliation' },
+    { name: 'Office Rent', href: '#' },
+    { name: 'Legal Advice', href: '#' }
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Sign In', href: '/login' },
+    { name: 'Sign Up', href: '/register' }
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'About', href: '/about-us' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Partners', href: '#' }
   ],
   legal: [
     { name: 'Claim', href: '#' },
