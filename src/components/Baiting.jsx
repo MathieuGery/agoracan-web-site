@@ -52,7 +52,7 @@ export function Baiting() {
                                         <p className="mt-4 text-base text-white">{link.description}</p>
                                     </div>
                                     <div className="rounded-bl-2xl rounded-br-2xl bg-secondary-900 p-6 md:px-8">
-                                        <button className="text-base font-medium text-primary-700 hover:text-primary-600 ursor-pointer transition duration-200 transform hover:scale-125">
+                                        <button className="text-base font-medium text-primary-600 hover:text-primary-600 ursor-pointer transition duration-200 transform hover:scale-125">
                                            <a href={link.href}> Discover </a>
                                             <span aria-hidden="true"> &rarr;</span>
                                         </button>
