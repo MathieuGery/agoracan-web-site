@@ -35,7 +35,7 @@ const solutions = [
   }
 ]
 const navigation = [
-  { name: 'Pricing', href: '/#pricing' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Workspace', href: '/workspace' },
   { name: 'About Us', href: '/about-us' },
   { name: 'Contact us', href: '/contact' },
