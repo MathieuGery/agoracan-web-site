@@ -28,13 +28,13 @@ class workspace extends Component {
                 <NavBar />
                 <div class="container mx-auto">
                     <div>
-                        <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-4xl">Our workspace in image</h2>
-                        <p className="mt-3 text-xl text-secondary-500 sm:mt-4">
+                        <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-xl mx-5">Our workspace in image</h2>
+                        <p className="mt-3 text-xl text-secondary-500 sm:mt-4 mx-5">
                             Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
                             arcu.
                         </p>
                     </div>
-                    <div className="relative my-5 mb-8">
+                    <div className="relative my-5 mb-8 mx-2">
                         <div className="absolute inset-0 flex items-center" aria-hidden="true">
                             <div className="w-full border-t border-secondary-400" />
                         </div>

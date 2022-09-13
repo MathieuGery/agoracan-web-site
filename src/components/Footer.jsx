@@ -1,20 +1,5 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Baiting } from './Baiting'
 
 const navigation = {
   solutions: [
@@ -108,11 +93,12 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-secondary-900" aria-labelledby="footer-heading">
+    <footer className="bg-white" aria-labelledby="footer-heading">
+      <Baiting/>
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="bg-secondary-900 mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="pb-8 xl:grid xl:grid-cols-5 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">
