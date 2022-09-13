@@ -167,9 +167,6 @@ export function Footer() {
                   >
                     <option>English</option>
                     <option>French</option>
-                    <option>German</option>
-                    <option>Japanese</option>
-                    <option>Spanish</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
                     <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
