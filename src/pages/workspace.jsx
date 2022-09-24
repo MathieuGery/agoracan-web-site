@@ -26,7 +26,7 @@ class workspace extends Component {
         return (
             <div>
                 <NavBar />
-                <div class="container mx-auto">
+                <div className="container mx-auto">
                     <div>
                         <h2 className="text-3xl font-bold tracking-tight text-secondary-900 sm:text-xl mx-5">Our workspace in image</h2>
                         <p className="mt-3 text-xl text-secondary-500 sm:mt-4 mx-5">
@@ -39,37 +39,37 @@ class workspace extends Component {
                             <div className="w-full border-t border-secondary-400" />
                         </div>
                     </div>
-                    <div class="grid-cols-3 mb-4 p-2 space-y-2 bg-white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
-                        <div class="w-full cursor-pointer transition duration-200 transform hover:scale-105">
+                    <div className="grid-cols-3 mb-4 p-2 space-y-2 bg-white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+                        <div className="w-full cursor-pointer transition duration-200 transform hover:scale-105">
                             <Image src="https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80"
                                 alt="image"
                                 height={"500%"}
                                 width={"500%"} />
                         </div>
-                        <div class="w-full col-span-2 row-span-2 rounded cursor-pointer transition duration-200 transform hover:scale-105">
+                        <div className="w-full col-span-2 row-span-2 rounded cursor-pointer transition duration-200 transform hover:scale-105">
                             <Image src="https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80"
                                 alt="image"
                                 layout="fill" />
                         </div>
-                        <div class="w-full cursor-pointer transition duration-200 transform hover:scale-105">
+                        <div className="w-full cursor-pointer transition duration-200 transform hover:scale-105">
                             <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
                                 alt="image"
                                 height={"500%"}
                                 width={"500%"} />
                         </div>
-                        <div class="w-full cursor-pointer transition duration-200 transform hover:scale-105">
+                        <div className="w-full cursor-pointer transition duration-200 transform hover:scale-105">
                             <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
                                 alt="image"
                                 height={"500%"}
                                 width={"500%"} />
                         </div>
-                        <div class="w-full cursor-pointer transition duration-200 transform hover:scale-105">
+                        <div className="w-full cursor-pointer transition duration-200 transform hover:scale-105">
                             <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
                                 alt="image"
                                 height={"500%"}
                                 width={"500%"} />
                         </div>
-                        <div class="w-full cursor-pointer transition duration-200 transform hover:scale-105">
+                        <div className="w-full cursor-pointer transition duration-200 transform hover:scale-105">
                             <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
                                 alt="image"
                                 height={"500%"}
