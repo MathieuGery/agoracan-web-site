@@ -9,7 +9,7 @@ import Presentation from '@/components/Presentation'
 import FeaturesSection from '@/components/FeaturesSection'
 import MainInfos from '@/components/MainInfos'
 import { Steps } from '@/components/Steps'
-import Map from '@/components/Map'
+import Map from '@/components/MainInfos'
 import Cta from '@/components/domiciliation/Cta'
 
 export default function Home() {
@@ -27,7 +27,6 @@ export default function Home() {
         {/* <PrimaryFeatures /> */}
         {/* <SecondaryFeatures /> */}
         {/* <CallToAction /> */}
-        <Map/>
         <MainInfos />
         <Presentation />
         <FeaturesSection />
