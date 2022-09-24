@@ -30,8 +30,8 @@ export default function MainInfos() {
     }, [])
 
     return (
-        <div className=" rounded-xl bg-secondary-900 py-2 mt-8 sm:mx-8">
-            <div className="relative mb-4 xl:col-start-1 xl:pb-24 m-6">
+        <div className=" rounded-xl bg-secondary-900 py-2 mt-8 sm:mx-8 mb-8">
+            <div className="relative mb-4 xl:col-start-1 m-6">
                 <p className="mt-3 text-3xl font-bold tracking-tight text-white">
                     The Best Location for your business
                 </p>

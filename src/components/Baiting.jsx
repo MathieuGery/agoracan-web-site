@@ -14,14 +14,14 @@ const supportLinks = [
     },
     {
         name: 'Office Rent',
-        href: '#',
+        href: '/officerent',
         description:
             'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
         icon: UserGroupIcon,
     },
     {
         name: 'Legal Advice',
-        href: '#',
+        href: '/legal-advice',
         description:
             'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
         icon: BriefcaseIcon,

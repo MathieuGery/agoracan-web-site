@@ -24,13 +24,13 @@ const solutions = [
   {
     name: 'Office Rent',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: '/officerent',
     icon: UserGroupIcon,
   },
   {
     name: 'Legal Advice',
     description: "Your customers' data will be safe and secure.",
-    href: '#',
+    href: '/legal-advice',
     icon: BriefcaseIcon,
   }
 ]
