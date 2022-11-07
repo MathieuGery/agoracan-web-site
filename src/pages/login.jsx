@@ -1,12 +1,26 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { supabase } from '@/lib/initSupabase'
 import { AuthLayout } from '@/components/AuthLayout'
-import { Button } from '@/components/Button'
 import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
+import { useState } from 'react'
 
 export default function Login() {
+
+  const [email, setEmail] = useState('')
+
+  const handleLogin = async (email) => {
+    console.log(email)
+    try {
+      const { error } = await supabase.auth.signIn({ email })
+      if (error) throw error
+      alert('Check your email for the login link!')
+    } catch (error) {
+      alert(error.error_description || error.message)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -33,13 +47,14 @@ export default function Login() {
             </p>
           </div>
         </div>
-        <form action="#" className="mt-10 grid grid-cols-1 gap-y-8">
+        <form className="mt-10 grid grid-cols-1 gap-y-8">
           <TextField
             label="Email address"
             id="email"
             name="email"
             type="email"
             autoComplete="email"
+            onChange={e => setEmail(e.target.value)}
             required
           />
           <TextField
@@ -51,8 +66,9 @@ export default function Login() {
             required
           />
           <div>
-            <Button
-              type="submit"
+            <button
+              // type="submit"
+              onClick={e =>(e.preventDefault(), handleLogin(email))}
               variant="solid"
               color="primary"
               className="w-full"
@@ -60,7 +76,7 @@ export default function Login() {
               <span>
                 Sign in <span aria-hidden="true">&rarr;</span>
               </span>
-            </Button>
+            </button>
           </div>
         </form>
       </AuthLayout>
