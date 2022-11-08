@@ -1,19 +1,23 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { supabase } from '@/lib/initSupabase'
 import { AuthLayout } from '@/components/AuthLayout'
 import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 import { useState } from 'react'
+import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
+
 
 export default function Login() {
-
+  const supabaseClient = useSupabaseClient()
+  const user = useUser()
   const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleLogin = async (email) => {
-    console.log(email)
+  const handleLogin = async (email, password) => {
+    console.log("user", user)
+    console.log(password)
     try {
-      const { error } = await supabase.auth.signIn({ email })
+      const { error } = await supabaseClient.auth.signInWithPassword({ email, password })
       if (error) throw error
       alert('Check your email for the login link!')
     } catch (error) {
@@ -63,12 +67,13 @@ export default function Login() {
             name="password"
             type="password"
             autoComplete="current-password"
+            onChange={e => setPassword(e.target.value)}
             required
           />
           <div>
             <button
               // type="submit"
-              onClick={e =>(e.preventDefault(), handleLogin(email))}
+              onClick={e =>(e.preventDefault(), handleLogin(email, password))}
               variant="solid"
               color="primary"
               className="w-full"

@@ -1,14 +1,21 @@
 import 'focus-visible'
 import '@/styles/tailwind.css'
-import { Auth } from '@supabase/ui'
-import { supabase } from '@/lib/initSupabase'
+import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
+import { SessionContextProvider } from '@supabase/auth-helpers-react'
+import { useState } from 'react'
 
 export default function App({ Component, pageProps }) {
+  // const router = useRouter()
+  const [supabaseClient] = useState(() => createBrowserSupabaseClient())
+
   return (
     <>
-      <Auth.UserContextProvider supabaseClient={supabase}>
+      <SessionContextProvider
+        supabaseClient={supabaseClient}
+        initialSession={pageProps.initialSession}
+      >
         <Component {...pageProps} />
-      </Auth.UserContextProvider>
+        </SessionContextProvider>
     </>
   )
 }
