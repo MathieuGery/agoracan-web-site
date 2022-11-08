@@ -5,8 +5,44 @@ import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
+import { useState } from 'react'
+import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
+import { userAgent } from 'next/server'
+import { useRouter } from 'next/router'
 
 export default function Register() {
+  const supabaseClient = useSupabaseClient()
+  const user = useUser()
+  const router = useRouter()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+
+  const handleRegister = async (email) => {
+    try {
+      const { error } = await supabaseClient.auth.signUp({ email, password })
+      if (error) throw error
+      const updates = {
+        id: user.id,
+        first_name: firstName,
+        last_name: lastName
+      }
+      console.log(updates)
+      const { err } = await supabaseClient.from('profiles').upsert(updates)
+      console.log(err)
+      if (err) {
+        throw err
+      }
+      else {
+        alert('Check your email for the login link!')
+        router.push('/login')
+      }
+    } catch (error) {
+      alert(error.error_description || error.message)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -43,6 +79,7 @@ export default function Register() {
             name="first_name"
             type="text"
             autoComplete="given-name"
+            onChange={e => setFirstName(e.target.value)}
             required
           />
           <TextField
@@ -51,6 +88,7 @@ export default function Register() {
             name="last_name"
             type="text"
             autoComplete="family-name"
+            onChange={e => setLastName(e.target.value)}
             required
           />
           <TextField
@@ -60,6 +98,7 @@ export default function Register() {
             name="email"
             type="email"
             autoComplete="email"
+            onChange={e => setEmail(e.target.value)}
             required
           />
           <TextField
@@ -69,25 +108,16 @@ export default function Register() {
             name="password"
             type="password"
             autoComplete="new-password"
+            onChange={e => setPassword(e.target.value)}
             required
           />
-          <SelectField
-            className="col-span-full"
-            label="How did you hear about us?"
-            id="referral_source"
-            name="referral_source"
-          >
-            <option>AltaVista search</option>
-            <option>Super Bowl commercial</option>
-            <option>Our route 34 city bus ad</option>
-            <option>The “Never Use This” podcast</option>
-          </SelectField>
           <div className="col-span-full">
             <Button
               type="submit"
               variant="solid"
               color="primary"
               className="w-full"
+              onClick={e => (e.preventDefault(), handleRegister(email))}
             >
               <span>
                 Sign up <span aria-hidden="true">&rarr;</span>
