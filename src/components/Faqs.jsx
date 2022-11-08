@@ -4,21 +4,25 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
   {
+    id: 1,
     question: "What's the best thing about Switzerland?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
   {
+    id: 2,
     question: "What's the best thing about Switzerland?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
   {
+    id: 3,
     question: "What's the best thing about Switzerland?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
-    {
+  {
+    id: 4,
     question: "What's the best thing about Switzerland?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
@@ -39,7 +43,7 @@ export function Faqs() {
           </h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
             {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="pt-6">
+              <Disclosure as="div" key={faq.id} className="pt-6">
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
