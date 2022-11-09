@@ -1,18 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
-import { SelectField, TextField } from '@/components/Fields'
+import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 import { useState } from 'react'
-import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
-import { userAgent } from 'next/server'
+import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useRouter } from 'next/router'
 
 export default function Register() {
   const supabaseClient = useSupabaseClient()
-  const user = useUser()
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -21,24 +18,12 @@ export default function Register() {
 
   const handleRegister = async (email) => {
     try {
-      const { error } = await supabaseClient.auth.signUp({ email, password })
+      const options = { data: { first_name: firstName, last_name: lastName } }
+      const { error } = await supabaseClient.auth.signUp({ email, password, options })
       if (error) throw error
       if (!error) {
-        const updates = {
-          id: user.id,
-          first_name: firstName,
-          last_name: lastName
-        }
-        console.log(updates)
-        const { err } = await supabaseClient.from('profiles').upsert(updates)
-        console.log(err)
-        if (err) {
-          throw err
-        }
-        else {
-          alert('Account successfully created!')
-          router.push('/login')
-        }
+        alert('Account successfully created!')
+        router.push('/login')
       }
     } catch (error) {
       alert(error.error_description || error.message)
