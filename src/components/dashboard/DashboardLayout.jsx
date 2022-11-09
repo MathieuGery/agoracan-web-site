@@ -34,6 +34,7 @@ export function DashboardLayout({children, current}) {
   const router = useRouter()
   const user = useUser()
 
+  console.log("user", user)
   const handleLogout = async () => {
     await supabaseClient.auth.signOut();
     router.push('/')
@@ -49,6 +50,7 @@ export function DashboardLayout({children, current}) {
         <body class="h-full">
         ```
       */}
+      {user && (
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -128,7 +130,7 @@ export function DashboardLayout({children, current}) {
                       ))}
                     </nav>
                   </div>
-                  <div className="flex flex-shrink-0 bg-secondary-700 p-4">
+                  <div className="flex flex-shrink-0 bg-primary-700 p-4">
                     <a href="#" className="group block flex-shrink-0">
                       <div className="flex items-center">
                         <div>
@@ -139,7 +141,7 @@ export function DashboardLayout({children, current}) {
                           />
                         </div>
                         <div className="ml-3">
-                          <p className="text-base font-medium text-white">Tom Cook</p>
+                          <p className="text-base font-medium text-white">{user.user_metadata.first_name} {user.user_metadata.last_name}</p>
                           <p className="text-sm font-medium text-secondary-400 group-hover:text-secondary-300" onClick={e => (e.preventDefault(), handleLogout())}>Sign Out</p>
                         </div>
                       </div>
@@ -187,7 +189,7 @@ export function DashboardLayout({children, current}) {
                 ))}
               </nav>
             </div>
-            <div className="flex flex-shrink-0 bg-secondary-700 p-4">
+            <div className="flex flex-shrink-0 bg-primary-700 p-4">
               <a href="#" className="group block w-full flex-shrink-0">
                 <div className="flex items-center">
                   <div>
@@ -198,7 +200,7 @@ export function DashboardLayout({children, current}) {
                     />
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-white">Tom Cook</p>
+                    <p className="text-sm font-medium text-white">{user.user_metadata.first_name} {user.user_metadata.last_name}</p>
                     <p className="text-xs font-medium text-secondary-300 group-hover:text-secondary-200" onClick={e => (e.preventDefault(), handleLogout())}>Sign Out</p>
                   </div>
                 </div>
@@ -220,20 +222,17 @@ export function DashboardLayout({children, current}) {
           <main className="flex-1">
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h1 className="text-2xl font-semibold text-secondary-900">Dashboard</h1>
+                <h1 className="text-2xl font-semibold text-secondary-900">{current}</h1>
               </div>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 {/* Replace with your content */}
-                <div className="py-4">
-                  <div className="h-96 rounded-lg border-4 border-dashed border-secondary-200" />
-                </div>
                 {user ? children : <div></div>}
                 {/* /End replace */}
               </div>
             </div>
           </main>
         </div>
-      </div>
+      </div>)}
     </>
   )
 }
