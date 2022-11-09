@@ -12,16 +12,16 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import { useSupabaseClient } from '@supabase/auth-helpers-react';
-import { data } from 'autoprefixer';
+import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
+import { useRouter } from 'next/router';
 
 const navigation = [
-  { name: 'Dashboard', href: '/dashboard/home', icon: HomeIcon, current: false },
-  { name: 'Profile', href: '/dashboard/profile', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
+  { name: 'Dashboard', href: '/dashboard/home', icon: HomeIcon },
+  { name: 'Profile', href: '/dashboard/profile', icon: UsersIcon },
+  { name: 'Projects', href: '#', icon: FolderIcon },
+  { name: 'Calendar', href: '#', icon: CalendarIcon },
+  { name: 'Documents', href: '#', icon: InboxIcon },
+  { name: 'Reports', href: '#', icon: ChartBarIcon },
 ]
 
 function classNames(...classes) {
@@ -31,19 +31,13 @@ function classNames(...classes) {
 export function DashboardLayout({children, current}) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const supabaseClient = useSupabaseClient()
+  const router = useRouter()
+  const user = useUser()
 
-  console.log(current)
   const handleLogout = async () => {
-    await supabaseClient.auth.signOut()
+    await supabaseClient.auth.signOut();
+    router.push('/')
   }
-
-  useEffect(() => {
-    navigation.map((item, index) => {
-      if (item.name === current) {
-        item.current = true;
-      }
-    })
-  })
 
   return (
     <>
@@ -116,7 +110,7 @@ export function DashboardLayout({children, current}) {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current
+                            item.name === current
                               ? 'bg-secondary-900 text-white'
                               : 'text-secondary-300 hover:bg-secondary-700 hover:text-white',
                             'group flex items-center px-2 py-2 text-base font-medium rounded-md'
@@ -124,7 +118,7 @@ export function DashboardLayout({children, current}) {
                         >
                           <item.icon
                             className={classNames(
-                              item.current ? 'text-secondary-300' : 'text-secondary-400 group-hover:text-secondary-300',
+                              item.name === current ? 'text-secondary-300' : 'text-secondary-400 group-hover:text-secondary-300',
                               'mr-4 flex-shrink-0 h-6 w-6'
                             )}
                             aria-hidden="true"
@@ -177,13 +171,13 @@ export function DashboardLayout({children, current}) {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-secondary-900 text-white' : 'text-secondary-300 hover:bg-secondary-700 hover:text-white',
+                      item.name === current ? 'bg-secondary-900 text-white' : 'text-secondary-300 hover:bg-secondary-700 hover:text-white',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                     )}
                   >
                     <item.icon
                       className={classNames(
-                        item.current ? 'text-secondary-300' : 'text-secondary-400 group-hover:text-secondary-300',
+                        item.name === current ? 'text-secondary-300' : 'text-secondary-400 group-hover:text-secondary-300',
                         'mr-3 flex-shrink-0 h-6 w-6'
                       )}
                       aria-hidden="true"
@@ -205,7 +199,7 @@ export function DashboardLayout({children, current}) {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-white">Tom Cook</p>
-                    <p className="text-xs font-medium text-secondary-300 group-hover:text-secondary-200">Sign Out</p>
+                    <p className="text-xs font-medium text-secondary-300 group-hover:text-secondary-200" onClick={e => (e.preventDefault(), handleLogout())}>Sign Out</p>
                   </div>
                 </div>
               </a>
@@ -233,7 +227,7 @@ export function DashboardLayout({children, current}) {
                 <div className="py-4">
                   <div className="h-96 rounded-lg border-4 border-dashed border-secondary-200" />
                 </div>
-                {children}
+                {user ? children : <div></div>}
                 {/* /End replace */}
               </div>
             </div>
