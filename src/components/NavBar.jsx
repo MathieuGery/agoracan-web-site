@@ -1,4 +1,4 @@
-import logo from '../images/logos/mini.jpg';
+import logo from '../images/logos/mini.png';
 import Image from 'next/image';
 import { Fragment } from 'react'
 import Link from 'next/link'
