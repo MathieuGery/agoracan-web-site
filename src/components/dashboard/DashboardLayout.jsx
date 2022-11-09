@@ -8,7 +8,7 @@ import {
   FolderIcon,
   HomeIcon,
   InboxIcon,
-  UsersIcon,
+  UserIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import Image from 'next/image'
@@ -17,7 +17,7 @@ import { useRouter } from 'next/router';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard/home', icon: HomeIcon },
-  { name: 'Profile', href: '/dashboard/profile', icon: UsersIcon },
+  { name: 'Profile', href: '/dashboard/profile', icon: UserIcon },
   { name: 'Projects', href: '#', icon: FolderIcon },
   { name: 'Calendar', href: '#', icon: CalendarIcon },
   { name: 'Documents', href: '#', icon: InboxIcon },
