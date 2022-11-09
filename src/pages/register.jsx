@@ -23,20 +23,22 @@ export default function Register() {
     try {
       const { error } = await supabaseClient.auth.signUp({ email, password })
       if (error) throw error
-      const updates = {
-        id: user.id,
-        first_name: firstName,
-        last_name: lastName
-      }
-      console.log(updates)
-      const { err } = await supabaseClient.from('profiles').upsert(updates)
-      console.log(err)
-      if (err) {
-        throw err
-      }
-      else {
-        alert('Check your email for the login link!')
-        router.push('/login')
+      if (!error) {
+        const updates = {
+          id: user.id,
+          first_name: firstName,
+          last_name: lastName
+        }
+        console.log(updates)
+        const { err } = await supabaseClient.from('profiles').upsert(updates)
+        console.log(err)
+        if (err) {
+          throw err
+        }
+        else {
+          alert('Account successfully created!')
+          router.push('/login')
+        }
       }
     } catch (error) {
       alert(error.error_description || error.message)

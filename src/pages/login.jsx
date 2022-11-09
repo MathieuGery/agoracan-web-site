@@ -5,11 +5,13 @@ import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 import { useState } from 'react'
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
+import { useRouter } from 'next/router'
 
 
 export default function Login() {
   const supabaseClient = useSupabaseClient()
   const user = useUser()
+  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -19,7 +21,9 @@ export default function Login() {
     try {
       const { error } = await supabaseClient.auth.signInWithPassword({ email, password })
       if (error) throw error
-      alert('Check your email for the login link!')
+      else {
+        router.push('/dashboard/home')
+      }
     } catch (error) {
       alert(error.error_description || error.message)
     }

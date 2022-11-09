@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '../images/logos/mini.jpg';
+import logo from '../images/logos/mini.png';
 
 export default function PageNotFound() {
   return (
