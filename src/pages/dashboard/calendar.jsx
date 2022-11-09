@@ -1,12 +1,12 @@
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
-import { UserProfile } from "@/components/dashboard/UserProfile";
+import { UserCalendar } from "@/components/dashboard/UserCalendar";
 
-export default function Profile() {
+export default function Calendar() {
 
   return (
     <>
       <DashboardLayout current="Profile">
-        <UserProfile/>
+        <UserCalendar/>
       </DashboardLayout>
     </>
   )

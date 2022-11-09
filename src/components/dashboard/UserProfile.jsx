@@ -1,6 +1,3 @@
-import Image from 'next/future/image'
-
-import backgroundImage from '@/images/background-auth.jpg'
 import { useUser } from '@supabase/auth-helpers-react'
 
 export function UserProfile({ }) {

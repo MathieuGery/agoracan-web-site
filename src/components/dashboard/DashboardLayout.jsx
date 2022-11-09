@@ -19,7 +19,7 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard/home', icon: HomeIcon },
   { name: 'Profile', href: '/dashboard/profile', icon: UserIcon },
   { name: 'Projects', href: '#', icon: FolderIcon },
-  { name: 'Calendar', href: '#', icon: CalendarIcon },
+  { name: 'Calendar', href: '/dashboard/calendar', icon: CalendarIcon },
   { name: 'Documents', href: '#', icon: InboxIcon },
   { name: 'Reports', href: '#', icon: ChartBarIcon },
 ]
