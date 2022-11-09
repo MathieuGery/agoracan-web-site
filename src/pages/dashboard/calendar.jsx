@@ -44,6 +44,7 @@ export default function Calendar() {
       }}
       eventChange={(e) => console.log(e)}
       dateClick={(e) => console.log(e.dateStr)}
+      height="auto"
       editable
       selectable
       nowIndicator
