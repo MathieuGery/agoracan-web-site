@@ -67,10 +67,11 @@ export default function Documents() {
     getBucket()
   }, [])
 
-  if (isLoading) return <p>Loading...</p>
   return (
     <>
       <DashboardLayout current="Documents">
+      {!isLoading &&
+      <>
         <div className="px-4 sm:px-6 lg:px-8 mt-8">
           <div className="sm:flex sm:items-center">
             <div className="sm:flex-auto">
@@ -168,7 +169,7 @@ export default function Documents() {
               </li>
             ))}
           </ul>
-        </div>
+        </div></>}
       </DashboardLayout>
     </>
   )

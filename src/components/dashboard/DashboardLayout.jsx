@@ -226,7 +226,7 @@ export function DashboardLayout({children, current}) {
               </div>
               <div className="mx-auto px-4 sm:px-6 md:px-8">
                 {/* Replace with your content */}
-                {user ? children : <div></div>}
+                {user ? children : <div>Loading</div>}
                 {/* /End replace */}
               </div>
             </div>

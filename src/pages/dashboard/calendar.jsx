@@ -33,7 +33,7 @@ export default function Calendar() {
 
   return (
     <>
-      <DashboardLayout current="Profile">
+      <DashboardLayout current="Calendar">
       <FullCalendar
       innerRef={calendarRef}
       plugins={[timeGridPlugin, interactionPlugin, dayGridPlugin]}
